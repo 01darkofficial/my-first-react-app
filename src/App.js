@@ -1,15 +1,15 @@
 
 import './App.css';
 import React, { useState } from 'react';
-import About from './components/About';
+// import About from './components/About';
 import FormText from './components/FormText';
 import Navbar from './components/Navbar';
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route
+// } from "react-router-dom";
 
 function App() {
 
@@ -55,20 +55,20 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Navbar title="Hell" home="UnderWorld" aboutText="About Hell's Service" modeTextColour={modeText} mode={mode} toggleMode={toggleMode} />
+      {/* <Router> */}
+        <Navbar title="Hell" home="UnderWorld" modeTextColour={modeText} mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className="container my-3">
-          <Switch>
+          {/* <Switch>
             <Route path="/about">
               <About mode={mode} />
             </Route>
-            <Route path="/">
+            <Route path="/"> */}
               <FormText showAlert={showAlert} heading="Hell's Service - Word Counter, Character Counter" mode={mode} />
-            </Route>
-          </Switch>
+            {/* </Route>
+          </Switch> */}
         </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
